@@ -25,7 +25,7 @@ session_start();
 <link rel="apple-touch-startup-image" sizes="1536x2008" href="images/splash/splash-screen-ipad-portrait-retina.png"   media="(device-width: 768px)	and (orientation: portrait)	and (-webkit-device-pixel-ratio: 2)"/>
 <link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"   media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
 
-<title>Fish Market</title>
+<title>Amlacc</title>
 <link rel="stylesheet" href="css2/style.css">
 
 <link href="styles/style.css"     		 rel="stylesheet" type="text/css">

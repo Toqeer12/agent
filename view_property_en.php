@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
  
  
-<title>Fish Market</title>
+<title>Amlacc</title>
 
 <link rel="stylesheet" href="css2/style.css">
 <link href="styles/style.css"     		 rel="stylesheet" type="text/css">
