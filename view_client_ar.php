@@ -39,6 +39,8 @@ session_start();
 <script type="text/javascript" src="scripts/jqueryui.js"></script>
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <style>
 	
 	/* 
@@ -191,13 +193,16 @@ session_start();
 
         
 		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">Client Details </div>
-
+		<div style="padding-left:20px;padding-top: 10px;height: 20px;">
+		 <input type="text" id="search" placeholder="Type to search..." />
+		</div>
+	<div style="margin-top:5px; padding-top:10px; text-align:center; height:1px; background:#27B2B9;Color:#000000;"></div>
  	<div id="page-wrap">
 
 
 
     
-	<table style = "direction:rtl";>
+	<table id="table" style = "direction:rtl";>
 		<thead>
  
 		</thead>
@@ -237,6 +242,17 @@ session_start();
  
     
 </div>
-
+ <script type="text/javascript">
+ $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($("#table tbody tr"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 	 
+	 </script>
 </body>
 

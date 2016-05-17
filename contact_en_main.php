@@ -169,13 +169,11 @@
  <script type="text/javascript">
     function contact(obj)
     {
-        alert("hello");
-       $("#result").load("contact_en.php?id=1");
+        $("#result").load("contact_en.php?id=1");
     }
         function contact2(obj)
     {
-        alert("hello");
-       $("#result").load("contact_en.php?id=2");
+        $("#result").load("contact_en.php?id=2");
     }
     </script>
  

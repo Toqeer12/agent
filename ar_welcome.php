@@ -142,43 +142,43 @@
       <?php echo   $_SESSION['fulname'];?>      <div style="float: right; padding-right:20px;font-size: 20px;" > أهلا بك</div>
 
 </div>
-	<a href="view_property_en.php"  >  
+	<a href="view_property_ar.php"  >  
     <div class="col span_3_of_4">
     <img src="images/property.png" style="
         height: 60px;
         width: 60px;
-        margin-left: 50px;
+        margin-left: 65px;
         margin-top: 50px;"/>
         <div style=" 
         margin-top: 10px;
         Color:WHITE;
-        margin-left: 50px;">العقارات و الوحدات</div>
+        margin-left: 65px;">العقارات و الوحدات</div>
         </div>
  </a>
-<a href="unit_detail_en.php" >        
+<a href="unit_detail_ar.php" >        
 	<div class="col span_2_of_4">
     <img src="images/unit.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 50px;
+    margin-left: 70px;
     margin-top: 50px;"/> 
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 70px;">Unit</div> 
+    margin-left: 90px;">Unit</div> 
  	</div>
 </a>
-<a href="lease_detail_en.php">  
+<a href="lease_detail_ar.php">  
 	<div class="col span_2_of_4">
    <img src="images/lease.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 45px;
-    margin-top: 40px;"/> 
+    margin-left: 60px;
+    margin-top: 60px;"/> 
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 55px;">عقود الإيجار</div>
+    margin-left: 70px;">عقود الإيجار</div>
  	</div>
 </a>     
 <a href="#">  
@@ -186,39 +186,39 @@
     <img src="images/notification.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 50px;
-    margin-top: 40px;"/>
+    margin-left: 70px;
+    margin-top: 60px;"/>
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 55px;">الإشعارات</div>
+    margin-left: 80px;">الإشعارات</div>
  	</div>
  </a>
  
- <a href="contact_en_main.php">  
+ <a href="contact.php">  
     <div class="col span_3_of_4">   
    <img src="images/contact.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 40px;
-    margin-top: 40px;"/>  
+    margin-left: 60px;
+    margin-top: 60px;"/>  
    <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 50px;">Contact</div>
+    margin-left: 70px;">Contact</div>
  	</div>
  </a>
- <a href="support_en.php" >  
+ <a href="support_ar.php" >  
 	<div class="col span_2_of_4">
     <img src="images/support.png" style="
     height: 60px;
     width: 60px;
-    margin-left:50px;
-    margin-top: 40px;"/> 
+    margin-left:70px;
+    margin-top: 60px;"/> 
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 50px;">الدعم الفني </div>
+    margin-left: 75px;">الدعم الفني </div>
  	</div>
 </a>
 </div>

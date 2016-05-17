@@ -128,7 +128,7 @@ session_start();
  
 <div class="section group">
     
-      <div style="padding-left:20px; color:RED;background-color: mediumturquoise;">
+      <div style="padding-left:20px; color:RED;background-color: mediumturquoise; color:RED;background-color: mediumturquoise; height: 67px;padding-top: 20px;">
       <span>Welcome:</span> <?php echo   $_SESSION['fulname'];?>
 </div>
 <a href="view_property_en.php"  >  
@@ -136,12 +136,12 @@ session_start();
     <img src="images/property.png" style="
         height: 60px;
         width: 60px;
-        margin-left: 50px;
+        margin-left: 65px;
         margin-top: 50px;"/>
         <div style=" 
         margin-top: 10px;
         Color:WHITE;
-        margin-left: 50px;">Properties</div>
+        margin-left: 65px;">Properties</div>
         </div>
  </a>
 <a href="unit_detail_en.php" >        
@@ -149,12 +149,12 @@ session_start();
     <img src="images/unit.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 50px;
+    margin-left: 70px;
     margin-top: 50px;"/> 
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 70px;">Unit</div> 
+    margin-left: 90px;">Unit</div> 
  	</div>
 </a>
 <a href="lease_detail_en.php">  
@@ -162,12 +162,12 @@ session_start();
    <img src="images/lease.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 45px;
-    margin-top: 40px;"/> 
+    margin-left: 60px;
+    margin-top: 60px;"/> 
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 55px;">Lease</div>
+    margin-left: 70px;">Lease</div>
  	</div>
 </a>     
 <a href="#">  
@@ -175,12 +175,12 @@ session_start();
     <img src="images/notification.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 50px;
-    margin-top: 40px;"/>
+    margin-left: 70px;
+    margin-top: 60px;"/>
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 55px;">Notification</div>
+    margin-left: 70px;">Notification</div>
  	</div>
  </a>
  
@@ -189,12 +189,12 @@ session_start();
    <img src="images/contact.png" style="
     height: 60px;
     width: 60px;
-    margin-left: 40px;
-    margin-top: 40px;"/>  
+    margin-left: 60px;
+    margin-top: 60px;"/>  
    <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 50px;">Contact</div>
+    margin-left: 70px;">Contact</div>
  	</div>
  </a>
  <a href="support_en.php" >  
@@ -202,12 +202,12 @@ session_start();
     <img src="images/support.png" style="
     height: 60px;
     width: 60px;
-    margin-left:50px;
-    margin-top: 40px;"/> 
+    margin-left:70px;
+    margin-top: 59px;"/> 
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 50px;">Support</div>
+    margin-left: 75px;">Support</div>
  	</div>
 </a>
 </div>
