@@ -158,7 +158,7 @@ session_start();
 		<div style="padding-left:20px;padding-top: 10px;height: 20px;">
 		 <input type="text" id="search" placeholder="Type to search..." />
 		</div>
-				<div style="margin-top:5px; padding-top:10px; text-align:center; height:1px; background:#27B2B9;Color:#000000;"></div>
+	<div style="margin-top:5px; padding-top:10px; text-align:center; height:1px; background:#27B2B9;Color:#000000;"></div>
 	<div id="page-wrap">
 
 

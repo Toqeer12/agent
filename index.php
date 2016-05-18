@@ -64,20 +64,24 @@
 ">
         <div class="content" style="padding-top: 150px;">
              <div class="one-half-responsive">
-                <h4>Sign In!</h4>
+              <div style="text-align:center"> <h4>Loging - تسجيل الدخول</h4></div><br>
                         <form action="login_validate.php" method="post" class="contactForm" >
                             <fieldset>
                                 <div class="formFieldWrap">
-                                    <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>
-                                    <input type="text" name="contactEmailField" value="" class="contactField requiredField" id="contactEmailField"/>
-                                </div>
+                                <!--    <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>-->
+                                    <input type="text" name="contactEmailField" value="" placeholder="example@example.com" class="contactField requiredField" id="contactEmailField" style="
+    background-color: white;
+"/>
+                                </div><br>
                                 <div class="formFieldWrap">
-                                    <label class="field-title contactNameField" for="contactNameField">Password: <span>(required)</span></label>
-                                    <input type="password" name="contactPasswordField" value=""class="contactField requiredField" id="contactPasswordField"/>
-                                </div>
+                                 <!--   <label class="field-title contactNameField" for="contactNameField">Password: <span>(required)</span></label>-->
+                                    <input type="password" name="contactPasswordField" value="" placeholder="*****" class="contactField requiredField" id="contactPasswordField" style="
+    background-color: white;
+"/>
+                                </div><br>
        
                                 <div class="formSubmitButtonErrorsWrap">
-                                    <input type="submit" class="buttonWrap button button-green contactSubmitButton" value="LOGIN!"/>
+                                    <input type="submit" class="buttonWrap button button-green contactSubmitButton" value="Loging - تسجيل الدخول"/>
                                 </div>
                             </fieldset>
                         </form>       
