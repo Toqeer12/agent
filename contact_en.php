@@ -7,7 +7,7 @@ $vartype = $_GET['id'];
 
 <div id="page-wrap">
   
-	<table>
+	<table id="table">
 		<thead>
  
 		</thead>

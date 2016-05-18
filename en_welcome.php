@@ -176,7 +176,7 @@ unset($_SESSION['user']);
     margin-left: 70px;">Lease</div>
  	</div>
 </a>     
-<a href="#">  
+<a href="notification_en.php">  
    	<div class="col span_3_of_4">
     <img src="images/notification.png" style="
     height: 60px;

@@ -78,16 +78,16 @@ unset($_SESSION['user']);
 @media only screen and (max-width: 480px) {
 	.col {  margin: 0% 0% 0% 0%; }
 	.span_1_of_4  { width: 50%;
-    height:220px;
+    height:200px;
     background:#ffffff; }
     .span_2_of_4 { width: 50%;
-    height:220px;
+    height:200px;
     background:#27B2B9; }
         .span_3_of_4 { width: 50%;
-    height:220px;
+    height:200px;
     background:#000000; }
         .span_4_of_4 { width: 50%;
-    height:220px;
+    height:200px;
     background:#ffffff; }
 }
             </style>
@@ -142,7 +142,7 @@ unset($_SESSION['user']);
 </div>
 <div class="section group">
     
-      <div style="padding-left:20px; color:RED;background-color: mediumturquoise;">
+      <div style="padding-left:20px; color:RED;background-color: mediumturquoise; color:RED;background-color: mediumturquoise; height: 67px;padding-top: 20px;">
       <?php echo   $_SESSION['fulname'];?>      <div style="float: right; padding-right:20px;font-size: 20px;" > أهلا بك</div>
 
 </div>
@@ -169,7 +169,7 @@ unset($_SESSION['user']);
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 90px;">Unit</div> 
+    margin-left: 90px;">وحدة</div> 
  	</div>
 </a>
 <a href="lease_detail_ar.php">  
@@ -185,7 +185,7 @@ unset($_SESSION['user']);
     margin-left: 70px;">عقود الإيجار</div>
  	</div>
 </a>     
-<a href="#">  
+<a href="notification_ar.php">  
    	<div class="col span_3_of_4">
     <img src="images/notification.png" style="
     height: 60px;
@@ -199,7 +199,7 @@ unset($_SESSION['user']);
  	</div>
  </a>
  
- <a href="contact.php">  
+ <a href="contact_ar_main.php">  
     <div class="col span_3_of_4">   
    <img src="images/contact.png" style="
     height: 60px;
@@ -209,7 +209,7 @@ unset($_SESSION['user']);
    <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 70px;">Contact</div>
+    margin-left: 70px;">اتصال</div>
  	</div>
  </a>
  <a href="support_ar.php" >  

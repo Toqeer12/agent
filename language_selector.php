@@ -16,7 +16,7 @@
 	<div style="  height:10px;text-align:center; background:#27B2B9;"> </div>
     <div class="header-controls">
         <a href="#" class="open-menu"><i class="fa fa-navicon"></i></a>
+ 
         <a href="#" class="open-slide"><i class="fa fa-globe"></i></a>
-
     </div>
 </div>

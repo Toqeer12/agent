@@ -30,8 +30,8 @@ include 'raw_file.php';
             
             <ul class="sidebar-navigation">
                 <li><a href="view_client_ar.php"> <i data-icon="a"></i>أسعار السوق اليوم<i class="fa fa-caret-right"></i></a></li>
-                <li><a href="#">                    <i class="icon-amlac-gateway-notifications"></i>الإشعارات <i class="fa fa-caret-right"></i></a></li>
-                <li><a href="contactar_main.php"><i class="fa fa-envelope-o"></i>تواصل معنا<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="notification_ar.php"> <i class="icon-amlac-gateway-notifications"></i>الإشعارات <i class="fa fa-caret-right"></i></a></li>
+                <li><a href="contact_ar_main.php"><i class="fa fa-envelope-o"></i>تواصل معنا<i class="fa fa-caret-right"></i></a></li>
                 <li><a href="support_ar.php"><i data-icon="m"></i>الدعم الفني <i class="fa fa-caret-right"></i></a></li>
                 <li><a href="logout.php"><i class="fa fa-mobile"></i>تسجيل الخروج<i class="fa fa-caret-right"></i></a></li>
                 

@@ -15,6 +15,11 @@ function logo()
                     $member  = mysql_fetch_assoc($result);
                     echo $member['images_path'];
                  }
+                 else
+                 {
+                    echo $images_path="images/icon.png";
+                 }
+               
         }
     
     

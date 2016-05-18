@@ -38,112 +38,14 @@ session_start();
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<!--
- 	<style>
-	
-	/* 
-	Max width before this PARTICULAR table gets nasty
-	This query will take effect for any screen smaller than 760px
-	and also iPads specifically.
-	*/
-	@media 
-	only screen and (max-width: 760px),
-	(min-device-width: 768px) and (max-device-width: 1024px)  {
-	
-		/* Force table to not be like tables anymore */
-		table, thead, tbody, th, td, tr { 
-			display: block; 
-		}
-		
-		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr { 
-			position: absolute;
-			top: -9999px;
-			left: -7777px;
-		}
-		
-		tr { border: 1px solid #ccc; }
-		
-		td { 
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid #eee; 
-			position: relative;
-			padding-left: 50%; 
-		}
-		
-		td:before { 
-			/* Now like a table header */
-			position: absolute;
-			/* Top/left values mimic padding */
-			top: 6px;
-			left: 6px;
-			width: 85%; 
-			padding-right: 5px; 
-			white-space: nowrap;
-		}
-		
-		/*
-		Label the data
-		*/
-		
-		td:nth-of-type(1):before { content: "Sr #"; }
-		td:nth-of-type(2):before { content: "Property Name"; }
-		td:nth-of-type(3):before { content: "Property Type"; }
-		td:nth-of-type(4):before { content: "Block No"; }
-		td:nth-of-type(5):before { content: "Annual Lease"; }
-		td:nth-of-type(6):before { content: "Commision Amount"; }
-		td:nth-of-type(7):before { content: "Comission"; }
-		td:nth-of-type(8):before { content: "Description"; }
-        td:nth-of-type(9):before { content: "Develop Process"; }
- 		td:nth-of-type(10):before { content: "Status"; }
-	  }
-	}
-	
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) {
-		body { 
-			padding: 0; 
-			margin: 0; 
-			width: 420px; }
-		}
-	
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		body { 
-			width: 495px; 
-		}
-	}
-	
-	</style>-->
-</head>
-<body> 
-
-<div id="preloader">
-	<div id="status">
-    	<p class="center-text">
-			يرجى الانتظار.....
-            <em>جاري عرض البيانات...</em>
-        </p>
-<!--        <p class="center-text">
-			Loading the content...
-            <em>Loading depends on your connection speed!</em>
-        </p>-->
+ 
     </div>
 </div>
     
     
 <?php include("language_selector.php")?>
 
-<!--<div class="header">
-    <a href="#" class="main-logo"></a>
-    <div class="header-controls">
-        <a href="#" class="open-more"><i class="fa fa-envelope"></i></a>
-        <a href="#" class="open-slide"><i class="fa fa-star"></i></a>
-        <a href="#" class="open-menu"><i class="fa fa-navicon"></i></a>
-    </div>-->
+ 
     <div class="header">
     <a href="#" class="main-logo"></a>
     <div class="header-controls">
@@ -185,7 +87,7 @@ session_start();
         <?php include("slider_ar.php");?>
     <!-- Page Content-->
     <div id="content" class="snap-content">
-		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">Unit Details </div>
+		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">تفاصيل وحدة</div>
 		<div style="padding-left:20px;padding-top: 10px;height: 20px;">
 		 <input type="text" id="search" placeholder="Type to search..." />
 		</div>

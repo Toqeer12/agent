@@ -10,11 +10,8 @@ session_start;
 	$name =  trim($_POST['contactNameField']);
 	$email =  trim($_POST['contactEmailField']);
 	$message =  trim($_POST['contactMessageTextarea']);
-	// variables end
-		$var=$_SESSION['user'];
-	$var2=$_SESSION['fulname'];
-	// email address starts
-	$emailAddress = $var;
+
+	$emailAddress = "contact@arrowtec.ae";
 	// email address ends
 	
 	$subject = "Message From: $name";	

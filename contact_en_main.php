@@ -22,7 +22,7 @@
 <script type="text/javascript" src="scripts/jqueryui.js"></script>
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 	<!--[if !IE]><!-->
  	<style>
@@ -150,8 +150,11 @@
 
 		   <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:left;  margin-top:20px"  value="Contact With Owner"  onclick="contact(this)"/>
    <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:right; margin-top:20px"  value="Contact With Leaser" onclick="contact2(this)" />           
-       
-     <div id="result" style="margin-top:100px">
+      <div style="padding-left:20px;padding-top: 10px;height: 20px;margin-top:70px;">
+		 <input type="text" id="search" placeholder="Type to search..." />
+		</div>
+	<div style="margin-top:5px; padding-top:10px; text-align:center; height:1px; background:#27B2B9;Color:#000000;"></div>
+     <div id="result" style="margin-top:80px">
               </div>    
  		
  
@@ -161,7 +164,7 @@
 		
 
  <script type="text/javascript">
-  $("#search").keyup(function(){
+ $("#search").keyup(function(){
         _this = this;
         // Show only matching TR, hide rest of them
         $.each($("#table tbody tr"), function() {
@@ -170,16 +173,16 @@
             else
                $(this).show();                
         });
-    }); 
-    function contact(obj)
+    }); 	 
+   function contact(obj)
     {
         $("#result").load("contact_en.php?id=1");
     }
-        function contact2(obj)
+   function contact2(obj)
     {
         $("#result").load("contact_en.php?id=2");
-    }
-    </script>
+    }	
+</script>
  
  
   

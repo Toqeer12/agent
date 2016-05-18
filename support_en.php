@@ -125,11 +125,11 @@
                                 </div>   
                                 <div class="formFieldWrap">
                                     <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>
-                                    <input type="text" name="contactNameField" value="Amlac" class="contactField requiredField" id="contactNameField" readonly/>
+                                    <input type="text" name="contactNameField" value="" class="contactField requiredField" id="contactNameField" readonly/>
                                 </div>
                                 <div class="formFieldWrap">
                                     <label class="field-title contactEmailField" for="contactEmailField">Email: <span>(required)</span></label>
-                                    <input type="text" name="contactEmailField" value="contact@arrowtec.ae" class="contactField requiredField requiredEmailField" id="contactEmailField" readonly/>
+                                    <input type="text" name="contactEmailField" value="" class="contactField requiredField requiredEmailField" id="contactEmailField" readonly/>
                                 </div>
                                 <div class="formTextareaWrap">
                                     <label class="field-title contactMessageTextarea" for="contactMessageTextarea">Message: <span>(required)</span></label>

@@ -2,6 +2,7 @@
 
 session_start();
 
+
 ?>
 
 
@@ -42,94 +43,77 @@ session_start();
 <script type="text/javascript" src="scripts/custom.js"></script>
 
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
- <style>
-	 thead tr:nth-child(even) { background-color: lime; }
-	 </style>
- <!--
+ <script type="text/javascript" src="js2/table.js"></script>
+ 
 <style>
 	
-	/* 
-	Max width before this PARTICULAR table gets nasty
-	This query will take effect for any screen smaller than 760px
-	and also iPads specifically.
-	*/
-	@media 
-	only screen and (max-width: 760px),
-	(min-device-width: 768px) and (max-device-width: 1024px)  {
-	
-		/* Force table to not be like tables anymore */
-		table, thead, tbody, th, td, tr { 
-			display: block; 
-			float:right;
+ @media (max-width: 600px) {
+    /* CSS Responsive table */
+    table.responsive,
+    table.responsive thead,
+    table.responsive tbody,
+    table.responsive th,
+    table.responsive td,
+    table.responsive tr {
+        display: block;
+    }
  
-		}
-		
-		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr { 
-			position: absolute;
-			top: -9999px;
-			left: -7777px;
+        table.responsive thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
  
-		}
-		
-		tr { border: 1px solid #ccc; }
-		
-		td { 
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid #eee; 
-			position: relative;
-			padding-left: 50%; 
-		}
-		
-		td:before { 
-			/* Now like a table header */
-			position: absolute;
-			/* Top/left values mimic padding */
-			top: 6px;
-			left: 6px;
-			width: 85%; 
-			padding-right: 5px; 
-			white-space: nowrap;
-		}
-		
-		/*
-		Label the data
-		*/
-		
-		td:nth-of-type(1):before { content: "Sr #"; }
-		td:nth-of-type(2):before { content: "Property Name"; }
-		td:nth-of-type(3):before { content: "Property Type"; }
-		td:nth-of-type(4):before { content: "Year Build"; }
-		td:nth-of-type(5):before { content: "Block No"; }
-		td:nth-of-type(6):before { content: "About Him"; }
-		td:nth-of-type(7):before { content: "Owner Name"; }
-		td:nth-of-type(8):before { content: "Instrument #"; }
-		td:nth-of-type(9):before { content: "No of Units"; }
-	  }
-	}
+        table.responsive tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+ 
+        table.responsive td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+        }
+ 
+            table.responsive td:before {
+                top: 6px;
+                left: 6px;
+                width: 40%;
+                padding-right: 10px;
+                text-align: left;
+                word-wrap: break-word;
+                font-weight: bold;
+            }
+ 
+        table.responsive tr:first-child {
+            /*position: absolute;
+            top: -9999px;
+            left: -9999px;*/
+        }
+ 
+        table.responsive td:before {
+            content: attr(data-content);
+            height: 50px;
+        }
+ 
+        table.responsive td.small-padding {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+ 
+        table.responsive td.medium-padding {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+ 
+        table.responsive td.large-padding {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+}
 	
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) {
-		body { 
-			padding: 0; 
-			margin: 0;
-			direction:rtl;
-			float:right;
-  			width: 420px; }
-		}
-	
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		body { 
-			width: 495px; 
-            direction:rtl;
-		}
-	}
-	
-	</style>-->
+	</style>
 </head>
 <body > 
 
@@ -194,12 +178,13 @@ session_start();
             </ul>
             
  
-        <?php include("slider_ar.php");?>
+        <?php include("slider_ar.php");
+?>
     <!-- Page Content-->
     <div id="content" class="snap-content">
 
         
-		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">Property Details </div>
+		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">تفاصيل العقار</div>
  		<div style="padding-left:20px;padding-top: 10px;height: 20px;">
 		 <input type="text" id="search" placeholder="Type to search..." />
 		</div>
@@ -209,55 +194,75 @@ session_start();
 
 
     
-	<table id="table" dir="rtl">
+	<table class="responsive" dir="rtl">
+		<thead>
+				<tr>	<th>رقم الطلب</th>
+				<th>تفاصيل الطلب</th>
+					<th  >موبايل التاجر</th>
+					<th  >تاريخ الاستلام</th>
+						<th  >تاريخ التسليم المتوقع</th>
+						<th  >أسم المستلم</th>
+						
+						<th  >موبايل المستلم</th>
+							<th  >حالة الطلب</th>
+							<th  >حالة الطلب</th>
+					</tr>
+				</thead>
+					<tbody >
 						<?php 
-			$var = $_SESSION['Id'];
-			$propertyDetail =propertyDetail($var);
-		
-			for($i=0; $i<count($propertyDetail); $i++)
-			{?>
-        		<thead class="cf">
-        				<tr height="25px">
-        				<th><font color="#8B0000">رقم الطلب</th>
-						<td height="25px" data-title="رقم الطلب"><font color="#8B0000"><?php echo $i+1;?> </td>
+$var = $_SESSION['Id'];
+
+$propertyDetail =propertyDetail($var);
+
+
+for ($i=0; $i<count($propertyDetail); $i++)
+{
+	?>
+			
+        	
+        				<tr >
+        			
+						<td  > <?php echo $i+1;
+?> </td> 
+        				
+						<td  ><?php echo $propertyDetail[$i]['propty_name'];
+?> </td>
+						 
+        			
+						<td  ><?php echo propertytype($propertyDetail[$i]['property_type']);
+?> </td>
+        				 
+						
+						<td  ><?php echo $propertyDetail[$i]['year_build'];
+?> </td>
+        				 
+					
+						<td  > <?php echo $propertyDetail[$i]['block_no'];
+?></td>
+        				 
+						
+						<td  > <?php echo $propertyDetail[$i]['about_him'];
+?></td>
+        				 
+						
+						<td  > <?php echo clientDetail($propertyDetail[$i]['owner_id']);
+?></td>
+        				 
+					
+						<td  ><?php echo $propertyDetail[$i]['inst_no'];
+?> </td>
+					
+							
+						
+						<td  ><?php echo viewpropertyUnit($propertyDetail[$i]['owner_id'],$propertyDetail[$i]['id'],$var);
+?> </td>
 						</tr>
-						<tr height="25px">
-        				<th>تفاصيل الطلب</th>
-						<td height="25px" data-title="تفاصيل الطلب"color:blue><?php echo $propertyDetail[$i]['propty_name'];?> </td>
-						</tr>
-						<tr height="25px">
-        				<th height="25px" class="numeric">موبايل التاجر</th>
-						<td height="25px" data-title="موبايل التاجر" class="numeric"><?php echo propertytype($propertyDetail[$i]['property_type']); ?> </td>
-        				</tr>
-						<tr height="25px">
-						<th height="25px" class="numeric">تاريخ الاستلام</th>
-						<td height="25px" data-title="تاريخ الاستلام" class="numeric"><?php echo $propertyDetail[$i]['year_build'];?> </td>
-        				</tr>
-						<tr height="25px">
-						<th height="25px" class="numeric">تاريخ التسليم المتوقع</th>
-						<td height="25px" data-title="تاريخ الاستلام" class="numeric"> <?php echo $propertyDetail[$i]['block_no'];?></td>
-        				</tr>
-						<tr height="25px">
-						<th height="25px" class="numeric">أسم المستلم</th>
-						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"> <?php echo $propertyDetail[$i]['about_him'];?></td>
-        				</tr>
-						<tr height="25px">
-						<th height="25px" class="numeric">موبايل المستلم</th>
-						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"> <?php echo clientDetail($propertyDetail[$i]['owner_id']);?></td>
-        				</tr>
-						<tr height="25px">
-						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
-						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $propertyDetail[$i]['inst_no'];?> </td>
-						</tr>
-						<tr height="25px">
-						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
-						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo viewpropertyUnit($propertyDetail[$i]['owner_id'],$propertyDetail[$i]['id'],$var);?> </td>
-						</tr>
-        			<tr height="5px">
-						<th height="5px" class="numeric">    </th>
- 						</tr>
-        		</thead>
-				<?php } ?>
+        		
+        		
+				<?php
+}
+?>
+</tbody>
 	</table>
 	
 	</div>
@@ -281,6 +286,15 @@ session_start();
                $(this).show();                
         });
     }); 	 
+	
+	
+	$(function () {
+           $('table.responsive').ngResponsiveTables({
+               smallPaddingCharNo: 13,
+               mediumPaddingCharNo: 18,
+               largePaddingCharNo: 30
+           });
+       });
 	 </script>
 </body>
 </html>

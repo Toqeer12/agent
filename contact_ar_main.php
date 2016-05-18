@@ -40,85 +40,7 @@ session_start();
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
- <!--	<style>
-	
-	/* 
-	Max width before this PARTICULAR table gets nasty
-	This query will take effect for any screen smaller than 760px
-	and also iPads specifically.
-	*/
-	@media 
-	only screen and (max-width: 760px),
-	(min-device-width: 768px) and (max-device-width: 1024px)  {
-	
-		/* Force table to not be like tables anymore */
-		table, thead, tbody, th, td, tr { 
-			display: block; 
-		}
-		
-		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr { 
-			position: absolute;
-			top: -9999px;
-			left: -7777px;
-		}
-		
-		tr { border: 1px solid #ccc; }
-		
-		td { 
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid #eee; 
-			position: relative;
-			padding-left: 50%; 
-		}
-		
-		td:before { 
-			/* Now like a table header */
-			position: absolute;
-			/* Top/left values mimic padding */
-			top: 6px;
-			left: 6px;
-			width: 85%; 
-			padding-right: 5px; 
-			white-space: nowrap;
-		}
-		
-		/*
-		Label the data
-		*/
-		
-		td:nth-of-type(1):before { content: "Sr #"; }
-		td:nth-of-type(2):before { content: "Property Name"; }
-		td:nth-of-type(3):before { content: "Property Type"; }
-		td:nth-of-type(4):before { content: "Year Build"; }
-		td:nth-of-type(5):before { content: "Block No"; }
-		td:nth-of-type(6):before { content: "About Him"; }
-		td:nth-of-type(7):before { content: "Owner Name"; }
-		td:nth-of-type(8):before { content: "Instrument #"; }
-		td:nth-of-type(9):before { content: "No of Units"; }
-	  }
-	}
-	
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) {
-		body { 
-			padding: 0; 
-			margin: 0; 
-			width: 420px; }
-		}
-	
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		body { 
-			width: 495px; 
-		}
-	}
-	
-	</style>-->
+ 
 </head>
 <body> 
 
@@ -128,23 +50,14 @@ session_start();
 			يرجى الانتظار.....
             <em>جاري عرض البيانات...</em>
         </p>
-<!--        <p class="center-text">
-			Loading the content...
-            <em>Loading depends on your connection speed!</em>
-        </p>-->
+ 
     </div>
 </div>
     
     
 <?php include("language_selector.php")?>
 
-<!--<div class="header">
-    <a href="#" class="main-logo"></a>
-    <div class="header-controls">
-        <a href="#" class="open-more"><i class="fa fa-envelope"></i></a>
-        <a href="#" class="open-slide"><i class="fa fa-star"></i></a>
-        <a href="#" class="open-menu"><i class="fa fa-navicon"></i></a>
-    </div>-->
+ 
     <div class="header">
     <a href="#" class="main-logo"></a>
     <div class="header-controls">
@@ -193,6 +106,11 @@ session_start();
    <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:left;  margin-top:20px"    value="Contact With Owner"  onclick="contact(this)"/>
    <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:right; margin-top:20px;"   value="Contact With Leaser" onclick="contact2(this)" />           
        
+	   
+	   		<div style="padding-left:20px;padding-top: 10px;height: 20px; margin-top:70px;">
+		 <input type="text" id="search" placeholder="Type to search..." />
+		</div>
+	<div style="margin-top:5px; padding-top:10px; text-align:center; height:1px; background:#27B2B9;Color:#000000;"></div>
      <div id="result" style="margin-top:100px">
               </div>    
     
@@ -207,6 +125,16 @@ session_start();
     
 </div>
  <script type="text/javascript">
+  $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($("#table tbody tr"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 	 
     function contact(obj)
     {
         $("#result").load("contact_ar.php?id=1");

@@ -198,7 +198,6 @@ session_start();
     <!-- Page Content-->
     <div id="content" class="snap-content">
 
-        
  
         
         <!-- Page Footer-->
@@ -209,18 +208,6 @@ session_start();
  
     
 </div>
- <script type="text/javascript">
- $("#search").keyup(function(){
-        _this = this;
-        // Show only matching TR, hide rest of them
-        $.each($("#table tbody tr"), function() {
-            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
-               $(this).hide();
-            else
-               $(this).show();                
-        });
-    }); 	 
-	 </script>
-</body>
+ 
 </html>
 
