@@ -1,8 +1,5 @@
 <?php session_start();?>
-<!DOCTYPE HTML>
-<html dir="rtl">
-
-<head>
+<!DOCTYPE HTML><head>
 	
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
@@ -221,4 +218,4 @@
 	 </script>
   
 </body>
-</html>
+

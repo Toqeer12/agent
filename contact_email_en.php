@@ -65,20 +65,6 @@
             </ul>
  
             <?php  include("slider.php"); ?>
-
-            
-       
-            
-
-            
- 
-            
-           
-            
-       
-            
-           
-       
         </div>
     </div>
   

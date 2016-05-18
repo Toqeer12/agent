@@ -41,7 +41,7 @@ session_start();
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
- 	<style>
+ <!--	<style>
 	
 	/* 
 	Max width before this PARTICULAR table gets nasty
@@ -118,7 +118,7 @@ session_start();
 		}
 	}
 	
-	</style>
+	</style>-->
 </head>
 <body> 
 
@@ -209,13 +209,11 @@ session_start();
  <script type="text/javascript">
     function contact(obj)
     {
-        alert("hello");
-       $("#result").load("contact_en.php?id=1");
+        $("#result").load("contact_ar.php?id=1");
     }
         function contact2(obj)
     {
-        alert("hello");
-       $("#result").load("contact_en.php?id=2");
+        $("#result").load("contact_ar.php?id=2");
     }
     </script>
  

@@ -9,8 +9,7 @@ if(isset($_POST['contactEmailField'])&&isset($_POST['contactPasswordField']))
  
 $Username=htmlspecialchars(trim($_POST['contactEmailField']));
 $Password=htmlspecialchars(trim($_POST['contactPasswordField']));
-$type=$_POST['type'];
- 
+  
 $encry=md5($Password);
  
 	if(!empty($Username)&&!empty($Password))

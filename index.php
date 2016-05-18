@@ -67,17 +67,28 @@
               <div style="text-align:center"> <h4>Loging - تسجيل الدخول</h4></div><br>
                         <form action="login_validate.php" method="post" class="contactForm" >
                             <fieldset>
+                                
+                                                                <div class="formValidationError" id="contactEmailField">
+                                    <div class="static-notification-red tap-dismiss-notification">
+                                        <p class="center-text uppercase">Name is required!</p>
+                                    </div>
+                                </div>             
+                                <div class="formValidationError" id="contactPasswordField">
+                                    <div class="static-notification-red tap-dismiss-notification">
+                                        <p class="center-text uppercase">Mail address required!</p>
+                                    </div>
+                                </div> 
                                 <div class="formFieldWrap">
                                 <!--    <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>-->
                                     <input type="text" name="contactEmailField" value="" placeholder="example@example.com" class="contactField requiredField" id="contactEmailField" style="
     background-color: white;
-"/>
+" required/>
                                 </div><br>
                                 <div class="formFieldWrap">
                                  <!--   <label class="field-title contactNameField" for="contactNameField">Password: <span>(required)</span></label>-->
                                     <input type="password" name="contactPasswordField" value="" placeholder="*****" class="contactField requiredField" id="contactPasswordField" style="
     background-color: white;
-"/>
+"required/>
                                 </div><br>
        
                                 <div class="formSubmitButtonErrorsWrap">

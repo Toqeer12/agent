@@ -40,7 +40,7 @@ session_start();
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+<!--
 <style>
 	
 	/* 
@@ -122,7 +122,7 @@ session_start();
 		}
 	}
 	
-	</style>
+	</style>-->
 </head>
 <body> 
 
@@ -202,11 +202,59 @@ session_start();
 
 
     
-	<table id="table" style = "direction:rtl";>
-		<thead>
- 
-		</thead>
-		<tbody>
+		
+			<table id="table" dir="rtl">
+				<?php 
+			$var = $_SESSION['Id'];
+			$propertyDetail =clientDetail2($var);
+		
+			for($i=0; $i<count($propertyDetail); $i++)
+			{
+			?>
+        		<thead class="cf">
+        				<tr height="25px">
+        				<th><font color="#8B0000">رقم الطلب</th>
+						<td height="25px" data-title="رقم الطلب"><font color="#8B0000"><?php echo $i+1;?> </td>
+						</tr>
+						<tr height="25px">
+        				<th>تفاصيل الطلب</th>
+						<td height="25px" data-title="تفاصيل الطلب"color:blue><?php echo $propertyDetail[$i]['real_name'];?> </td>
+						</tr>
+						<tr height="25px">
+        				<th height="25px" class="numeric">موبايل التاجر</th>
+						<td height="25px" data-title="موبايل التاجر" class="numeric"><?php echo $propertyDetail[$i]['emi_id'];?> </td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ الاستلام</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"><?php echo $propertyDetail[$i]['mob_no'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ التسليم المتوقع</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"> <?php echo $propertyDetail[$i]['email'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">أسم المستلم</th>
+						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"> <?php echo $propertyDetail[$i]['resi_address'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">موبايل المستلم</th>
+						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"><?php echo $propertyDetail[$i]['sponsor'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $propertyDetail[$i]['vendor'];?> </td>
+						</tr>
+							<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $propertyDetail[$i]['notes'];?></td>
+						</tr>
+        			<tr height="5px">
+						<th height="5px" class="numeric">    </th>
+ 						</tr>
+        		</thead>
+				<?php } ?>
+	</table>
+	<!--	<tbody>
 		
 			
 			<?php 
@@ -229,7 +277,7 @@ session_start();
 
  		</tr>
 		 <?php }?>
-		</tbody>
+		</tbody>-->
 	</table>
 	
 	</div>

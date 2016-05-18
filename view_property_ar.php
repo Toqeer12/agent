@@ -5,7 +5,8 @@ session_start();
 ?>
 
 
-<!DOCTYPE HTML >
+<!DOCTYPE HTML>
+<html>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,6 +42,10 @@ session_start();
 <script type="text/javascript" src="scripts/custom.js"></script>
 
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <style>
+	 thead tr:nth-child(even) { background-color: lime; }
+	 </style>
+ <!--
 <style>
 	
 	/* 
@@ -55,7 +60,7 @@ session_start();
 		/* Force table to not be like tables anymore */
 		table, thead, tbody, th, td, tr { 
 			display: block; 
-			direction:rtl;
+			float:right;
  
 		}
 		
@@ -112,7 +117,8 @@ session_start();
 			padding: 0; 
 			margin: 0;
 			direction:rtl;
- 			width: 420px; }
+			float:right;
+  			width: 420px; }
 		}
 	
 	/* iPads (portrait and landscape) ----------- */
@@ -123,9 +129,9 @@ session_start();
 		}
 	}
 	
-	</style>
+	</style>-->
 </head>
-<body> 
+<body > 
 
 <div id="preloader">
 	<div id="status">
@@ -203,33 +209,55 @@ session_start();
 
 
     
-	<table id="table" style="direction:rtl;">
-		<thead>
- 
-		</thead>
-		<tbody>
-		
-			
-			<?php 
+	<table id="table" dir="rtl">
+						<?php 
 			$var = $_SESSION['Id'];
 			$propertyDetail =propertyDetail($var);
 		
 			for($i=0; $i<count($propertyDetail); $i++)
-			{
-			?>
-			<tr>
-			<td><?php echo $i+1;?></td>
-			<td><?php echo $propertyDetail[$i]['propty_name'];?></td>
-			<td><?php echo propertytype($propertyDetail[$i]['property_type']); ?></td>
-			<td><?php echo $propertyDetail[$i]['year_build'];?></td>
-			<td><?php echo $propertyDetail[$i]['block_no'];?></td>
-			<td><?php echo $propertyDetail[$i]['about_him'];?></td>
-			<td><?php echo clientDetail($propertyDetail[$i]['owner_id']);?></td>
-			<td><?php echo $propertyDetail[$i]['inst_no'];?></td>			
-	        <td><?php echo viewpropertyUnit($propertyDetail[$i]['owner_id'],$propertyDetail[$i]['id'],$var);?></td>	
-		</tr>
-		 <?php }?>
-		</tbody>
+			{?>
+        		<thead class="cf">
+        				<tr height="25px">
+        				<th><font color="#8B0000">رقم الطلب</th>
+						<td height="25px" data-title="رقم الطلب"><font color="#8B0000"><?php echo $i+1;?> </td>
+						</tr>
+						<tr height="25px">
+        				<th>تفاصيل الطلب</th>
+						<td height="25px" data-title="تفاصيل الطلب"color:blue><?php echo $propertyDetail[$i]['propty_name'];?> </td>
+						</tr>
+						<tr height="25px">
+        				<th height="25px" class="numeric">موبايل التاجر</th>
+						<td height="25px" data-title="موبايل التاجر" class="numeric"><?php echo propertytype($propertyDetail[$i]['property_type']); ?> </td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ الاستلام</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"><?php echo $propertyDetail[$i]['year_build'];?> </td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ التسليم المتوقع</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"> <?php echo $propertyDetail[$i]['block_no'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">أسم المستلم</th>
+						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"> <?php echo $propertyDetail[$i]['about_him'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">موبايل المستلم</th>
+						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"> <?php echo clientDetail($propertyDetail[$i]['owner_id']);?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $propertyDetail[$i]['inst_no'];?> </td>
+						</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo viewpropertyUnit($propertyDetail[$i]['owner_id'],$propertyDetail[$i]['id'],$var);?> </td>
+						</tr>
+        			<tr height="5px">
+						<th height="5px" class="numeric">    </th>
+ 						</tr>
+        		</thead>
+				<?php } ?>
 	</table>
 	
 	</div>
@@ -255,4 +283,5 @@ session_start();
     }); 	 
 	 </script>
 </body>
+</html>
 

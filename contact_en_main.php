@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
  
  
-<title>Fish Market</title>
+<title>Amlacc</title>
 
 <link rel="stylesheet" href="css2/style.css">
 <link href="styles/style.css"     		 rel="stylesheet" type="text/css">
@@ -121,13 +121,7 @@
     
     
 <?php include("language_selector.php")?>
-<!--<div class="header">
-    <a href="#" class="main-logo"></a>
-    <div class="header-controls">
-        <a href="#" class="open-more"><i class="fa fa-envelope"></i></a>
-        <a href="#" class="open-slide"><i class="fa fa-star"></i></a>
-        <a href="#" class="open-menu"><i class="fa fa-navicon"></i></a>
-    </div>-->
+
 
 
 <div class="all-elements">
@@ -167,6 +161,16 @@
 		
 
  <script type="text/javascript">
+  $("#search").keyup(function(){
+        _this = this;
+        // Show only matching TR, hide rest of them
+        $.each($("#table tbody tr"), function() {
+            if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+               $(this).hide();
+            else
+               $(this).show();                
+        });
+    }); 
     function contact(obj)
     {
         $("#result").load("contact_en.php?id=1");

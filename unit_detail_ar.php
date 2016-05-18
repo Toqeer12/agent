@@ -38,7 +38,7 @@ session_start();
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+<!--
  	<style>
 	
 	/* 
@@ -117,7 +117,7 @@ session_start();
 		}
 	}
 	
-	</style>
+	</style>-->
 </head>
 <body> 
 
@@ -191,34 +191,65 @@ session_start();
 		</div>
 	<div style="margin-top:5px; padding-top:10px; text-align:center; height:1px; background:#27B2B9;Color:#000000;"></div>
         	<div id="page-wrap">
-	<table id="table">
-		<thead>
- 
-		</thead>
-		<tbody>
+	<table id="table" dir="rtl">
 		
-			
-			<?php 
+			<table id="table" dir="rtl">
+			<?php  
 			$var = $_SESSION['Id'];
 			$propertyDetail =Unitdetail($var);
 		
 			for($i=0; $i<count($propertyDetail); $i++)
 			{
 			?>
-			<tr>
-			<td><?php echo $i+1;?></td>
-			<td><?php echo propertyName($propertyDetail[$i]['property_name']);?></td>
-			<td><?php echo propertytype($propertyDetail[$i]['property_type']); ?></td>
-			<td><?php echo $propertyDetail[$i]['block_no'];?></td>
-			<td><?php echo $propertyDetail[$i]['annul_lease'];?></td>
-			<td><?php echo $propertyDetail[$i]['comission_amount'];?></td>
-			<td><?php echo $propertyDetail[$i]['comission'];?></td>
-			<td><?php echo $propertyDetail[$i]['desc-unity'];?></td>		
-            <td><?php echo $propertyDetail[$i]['develop_proces'];?></td>		
-	        <td><?php echo $propertyDetail[$i]['status'];?></td>	
-		</tr>
-		 <?php }?>
-		</tbody>
+        		<thead class="cf">
+        				<tr height="25px">
+        				<th><font color="#8B0000">رقم الطلب</th>
+						<td height="25px" data-title="رقم الطلب"><font color="#8B0000"><?php echo $i+1;?> </td>
+						</tr>
+						<tr height="25px">
+        				<th>تفاصيل الطلب</th>
+						<td height="25px" data-title="تفاصيل الطلب"color:blue><?php echo propertyName($propertyDetail[$i]['property_name']);?> </td>
+						</tr>
+						<tr height="25px">
+        				<th height="25px" class="numeric">موبايل التاجر</th>
+						<td height="25px" data-title="موبايل التاجر" class="numeric"><?php echo propertytype($propertyDetail[$i]['property_type']); ?> </td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ الاستلام</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"><?php echo $propertyDetail[$i]['block_no'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ التسليم المتوقع</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"> <?php echo $propertyDetail[$i]['annul_lease'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">أسم المستلم</th>
+						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"> <?php echo $propertyDetail[$i]['comission_amount'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">موبايل المستلم</th>
+						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"><?php echo $propertyDetail[$i]['comission'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $propertyDetail[$i]['desc-unity'];?></td>
+						</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $propertyDetail[$i]['develop_proces'];?> </td>
+						</tr>
+							<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $propertyDetail[$i]['status'];?> </td>
+						</tr>
+        			<tr height="5px">
+						<th height="5px" class="numeric">    </th>
+ 						</tr>
+        		</thead>
+				<?php } ?>
+	</table>
+	
+ 
 	</table>
 	
 	</div> 

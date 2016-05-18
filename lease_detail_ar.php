@@ -38,7 +38,7 @@ session_start();
 <script type="text/javascript" src="scripts/custom.js"></script>
 
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+<!--
 <style>
 	
 	/* 
@@ -117,7 +117,7 @@ session_start();
 		}
 	}
 	
-	</style>
+	</style>-->
 </head>
 <body> 
 
@@ -189,33 +189,60 @@ session_start();
 
 
     
-	<table id="table">
-		<thead>
+	<table id="table" dir="rtl">
+		 <?php 
  
-		</thead>
-		<tbody>
-		
-			
-			<?php 
 			$var = $_SESSION['Id'];
 			$LeaseDetail =LeaseDetail($var);
 		
 			for($i=0; $i<count($LeaseDetail); $i++)
 			{
 			?>
-			<tr>
-			<td><?php echo $i+1;?></td>
-			<td><?php echo propertyName($LeaseDetail[$i]['property_name']);?></td>
-			<td><?php echo $LeaseDetail[$i]['write_con_dat']; ?></td>
-			<td><?php echo $LeaseDetail[$i]['start_date'];?></td>
-			<td><?php echo $LeaseDetail[$i]['ending_date'];?></td>
-			<td><?php echo clientDetail($LeaseDetail[$i]['renter']);?></td>
-			<td><?php echo clientDetail($LeaseDetail[$i]['owner']);?></td>
-			<td><?php echo $LeaseDetail[$i]['duration'];?></td>			
-			<td><?php echo $LeaseDetail[$i]['schudle_month'];?></td>			
-		</tr>
-		 <?php }?>  
-		</tbody>
+        		<thead class="cf">
+        				<tr height="25px">
+        				<th><font color="#8B0000">رقم الطلب</th>
+						<td height="25px" data-title="رقم الطلب"><font color="#8B0000"><?php echo $i+1;?> </td>
+						</tr>
+						<tr height="25px">
+        				<th>تفاصيل الطلب</th>
+						<td height="25px" data-title="تفاصيل الطلب"color:blue><?php echo propertyName($LeaseDetail[$i]['property_name']);?></td>
+						</tr>
+						<tr height="25px">
+        				<th height="25px" class="numeric">موبايل التاجر</th>
+						<td height="25px" data-title="موبايل التاجر" class="numeric"><?php echo $LeaseDetail[$i]['write_con_dat']; ?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ الاستلام</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"><?php echo $LeaseDetail[$i]['start_date'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">تاريخ التسليم المتوقع</th>
+						<td height="25px" data-title="تاريخ الاستلام" class="numeric"><?php echo $LeaseDetail[$i]['ending_date'];?></td>
+        				</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric">أسم المستلم</th>
+						<td height="25px" data-title="تاريخ التسليم المتوقع" class="numeric"><?php echo clientDetail($LeaseDetail[$i]['renter']);?></td>
+        				</tr>
+		 
+						<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo clientDetail($LeaseDetail[$i]['owner']);?></td>
+						</tr>
+						<tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $LeaseDetail[$i]['duration'];?> </td>
+						</tr>
+						 <tr height="25px">
+						<th height="25px" class="numeric"><font color="#DC143C">حالة الطلب</th>
+						<td height="25px" data-title="موبايل المستلم" class="numeric"><font color="#DC143C"><?php echo $LeaseDetail[$i]['schudle_month'];?></td>
+						</tr>
+        			<tr height="5px">
+						<th height="5px" class="numeric">    </th>
+ 						</tr>
+        		</thead>
+				<?php } ?>
+			
+
 	</table>
 	
 	</div>
